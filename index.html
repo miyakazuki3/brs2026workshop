@@ -144,6 +144,22 @@
   .fact dd{margin:0;font-weight:500;line-height:1.45}
   .fact dd small{display:block;font-weight:400;color:var(--muted);font-size:.86rem}
 
+  /* Newly confirmed details sit on their own line, in the accent colour. */
+  .room{
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+    margin-top:11px;padding-top:10px;
+    border-top:1px solid var(--rule);
+    font-weight:600;font-size:1.04rem;color:var(--crimson);
+    line-height:1.3;
+  }
+  .fresh{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:500;
+    color:#fff;background:var(--crimson);
+    border-radius:2px;padding:3px 7px;
+  }
+
   .cta{
     display:flex;flex-wrap:wrap;align-items:center;gap:16px;
     background:var(--card);border:1px solid var(--rule);border-top:none;
@@ -353,7 +369,7 @@
     </div>
     <div class="fact">
       <dt>Venue</dt>
-      <dd>The University of Tokyo<small>Hongo Campus, Engineering Building 2</small></dd>
+      <dd>The University of Tokyo<small>Hongo Campus, Engineering Building 2</small><span class="room">Room 13BC, 1F <span class="fresh">New</span></span></dd>
     </div>
     <div class="fact">
       <dt>Fee</dt>
@@ -376,8 +392,9 @@
     <div class="bar" role="img" aria-label="Proportional overview of the day, from 11:00 to 21:00.">
       <span style="width:1.67%;background:var(--plum)"   title="Opening"></span>
       <span style="width:8.33%;background:var(--plum)"   title="Personal introductions"></span>
-      <span style="width:15%;background:var(--neutral)"  title="Lunch"></span>
-      <span style="width:13.33%;background:var(--amber)" title="Lab tour, demonstrations, and exhibition"></span>
+      <span style="width:10%;background:var(--neutral)"  title="Lunch"></span>
+      <span style="width:5%;background:var(--amber)"     title="Lab tour"></span>
+      <span style="width:13.33%;background:var(--amber)" title="Demonstrations and exhibition"></span>
       <span style="width:1.67%;background:var(--neutral)" title="Break"></span>
       <span style="width:6.67%;background:var(--crimson)" title="Lab presentations"></span>
       <span style="width:2.5%;background:var(--neutral)"  title="Break"></span>
@@ -436,7 +453,7 @@
     </div>
 
     <div class="row quiet">
-      <div class="time">12:00 – 13:30<em>90 min</em></div>
+      <div class="time">12:00 – 13:00<em>60 min</em></div>
       <div><p class="session">Lunch</p></div>
     </div>
   </section>
@@ -444,7 +461,23 @@
   <!-- ---------- lab tour ---------- -->
   <section class="chapter">
     <div class="chapter-head">
-      <h2>Lab tour, demonstrations, and exhibition</h2>
+      <h2>Lab tour</h2>
+      <span class="span">13:00 – 13:30</span>
+    </div>
+
+    <div class="row tour">
+      <div class="time">13:00 – 13:30<em>30 min</em></div>
+      <div>
+        <p class="session"><a class="labname" href="https://www.hybrid.t.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">Takeuchi Lab</a></p>
+        <p class="by"><span class="talktitle">Guided tour of the laboratory</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- demonstrations and exhibition ---------- -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <h2>Demonstrations and exhibition</h2>
       <span class="span">13:30 – 14:50</span>
     </div>
 
